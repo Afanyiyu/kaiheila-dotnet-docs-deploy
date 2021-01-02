@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bot 类
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bot 类
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/addon.css">
+    <link href="//cdn.jsdelivr.net/gh/noelboss/featherlight@master/release/featherlight.min.css" type="text/css" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="&#25628;&#32034;" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">&#25628;&#32034;&#32467;&#26524; <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="&#39318;&#39029;" data-prev="&#19978;&#19968;&#39029;" data-next="&#19979;&#19968;&#39029;" data-last="&#23614;&#39029;"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">&#26174;&#31034;/&#38544;&#34255;&#30446;&#24405;</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kaiheila.Client.Bot">
+  
+  
+  <h1 id="Kaiheila_Client_Bot" data-uid="Kaiheila.Client.Bot" class="text-break">Bot 类
+  </h1>
+  <div class="markdown level0 summary"><p>Kaiheila 机器人。</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>&#32487;&#25215;</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Bot</span></div>
+      <div class="level2"><a class="xref" href="Kaiheila.Client.Rest.RestClient.html">RestClient</a></div>
+      <div class="level2"><a class="xref" href="Kaiheila.Client.ZeroClient.html">ZeroClient</a></div>
+  </div>
+  <h6><strong>&#21629;&#21517;&#31354;&#38388;</strong>: <a class="xref" href="Kaiheila.Client.html">Kaiheila.Client</a></h6>
+  <h6><strong>&#31243;&#24207;&#38598;</strong>: kaiheila-dotnet.dll</h6>
+  <h5 id="Kaiheila_Client_Bot_syntax">&#35821;&#27861;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Bot : IDisposable</code></pre>
+  </div>
+  <h5 id="Kaiheila_Client_Bot_remarks"><strong>&#22791;&#27880;</strong></h5>
+  <div class="markdown level0 remarks"><p><a class="xref" href="Kaiheila.Client.Bot.html">Bot</a> 类是所有 Kaiheila 机器人的基类。</p>
+<p><a class="xref" href="Kaiheila.Client.Bot.html">Bot</a> 类中提供了诸如 <a class="xref" href="Kaiheila.Client.Bot.html#Kaiheila_Client_Bot_Start">Start()</a> 和 <a class="xref" href="Kaiheila.Client.Bot.html#Kaiheila_Client_Bot_Dispose">Dispose()</a> 等公用方法。</p>
+<p><a class="xref" href="Kaiheila.Client.Bot.html">Bot</a> 类是一个抽象类。你需要使用其派生类来初始化 Kaiheila 机器人。</p>
+</div>
+  <h5 id="Kaiheila_Client_Bot_examples"><strong>&#31034;&#20363;</strong></h5>
+  <p>下面的示例演示了如何创建一个 <a class="xref" href="Kaiheila.Client.WebHook.WebHookClient.html">WebHookClient</a> 实例并连接。</p>
+<pre><code>namespace BotExample
+{
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+            Bot bot =
+                WebHookClient.CreateWebHookClient() // 使用「WebHookClient」来创建
+                    .Configure(options =>
+                    {
+                        options
+                            .Listen(8000) // 要监听的端口
+                            .UseEncryptKey(&quot;VYDVSU&quot;) // 「开发者中心」中提供的 Encrypt Key
+                            .UseVerifyToken(&quot;JEe-o85KiCd78fi&quot;) // 「开发者中心」中提供的 Verify Token
+                            .UseBotAuthorization(&quot;1E/3p7EClDQ=/Fro4cT47ipnqcERGFDvfQw==&quot;); // 「开发者中心」中提供的 Token
+                    }).Build(); // 创建「WebHookClient」
+
+            bot.Start(); // 启动机器人
+        }
+    }
+}</code></pre>
+
+  <h3 id="constructors">&#26500;&#36896;&#20989;&#25968;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot__ctor.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L63">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="Kaiheila_Client_Bot__ctor_" data-uid="Kaiheila.Client.Bot.#ctor*"></a>
+  <h4 id="Kaiheila_Client_Bot__ctor" data-uid="Kaiheila.Client.Bot.#ctor">Bot()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Bot()</code></pre>
+  </div>
+  <h3 id="fields">&#23383;&#27573;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot_EventObserver.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot.EventObserver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L57">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <h4 id="Kaiheila_Client_Bot_EventObserver" data-uid="Kaiheila.Client.Bot.EventObserver">EventObserver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IObserver&lt;KhEventBase&gt; EventObserver</code></pre>
+  </div>
+  <h5 class="fieldValue">&#23383;&#27573;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IObserver</span>&lt;<a class="xref" href="Kaiheila.Events.KhEventBase.html">KhEventBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">&#23646;&#24615;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot_Event.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot.Event%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L55">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="Kaiheila_Client_Bot_Event_" data-uid="Kaiheila.Client.Bot.Event*"></a>
+  <h4 id="Kaiheila_Client_Bot_Event" data-uid="Kaiheila.Client.Bot.Event">Event</h4>
+  <div class="markdown level1 summary"><p>机器人事件的 Observable。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IObservable&lt;KhEventBase&gt; Event { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">&#23646;&#24615;&#20540;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IObservable</span>&lt;<a class="xref" href="Kaiheila.Events.KhEventBase.html">KhEventBase</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">&#26041;&#27861;
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot_Dispose.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L107">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="Kaiheila_Client_Bot_Dispose_" data-uid="Kaiheila.Client.Bot.Dispose*"></a>
+  <h4 id="Kaiheila_Client_Bot_Dispose" data-uid="Kaiheila.Client.Bot.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>断开 <a class="xref" href="Kaiheila.Client.Bot.html">Bot</a> 与 Kaiheila 服务器的连接，并释放所有资源。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
+  </div>
+  <h5 id="Kaiheila_Client_Bot_Dispose_remarks">&#22791;&#27880;</h5>
+  <div class="markdown level1 remarks"><p>在执行一次 <a class="xref" href="Kaiheila.Client.Bot.html#Kaiheila_Client_Bot_Dispose">Dispose()</a> 方法之后，该对象的所有资源将会立即被销毁。</p>
+<p>若要再次使用机器人，请创建一个新的 <a class="xref" href="Kaiheila.Client.Bot.html">Bot</a> 实例。</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot_SendTextMessage_System_Int32_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot.SendTextMessage(System.Int32%2CSystem.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L90">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="Kaiheila_Client_Bot_SendTextMessage_" data-uid="Kaiheila.Client.Bot.SendTextMessage*"></a>
+  <h4 id="Kaiheila_Client_Bot_SendTextMessage_System_Int32_System_Int64_System_String_System_String_" data-uid="Kaiheila.Client.Bot.SendTextMessage(System.Int32,System.Int64,System.String,System.String)">SendTextMessage(Int32, Int64, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;(string, long)&gt; SendTextMessage(int type, long channel, string content, string quote = null)</code></pre>
+  </div>
+  <h5 class="parameters">&#21442;&#25968;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#21517;&#31216;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">content</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">quote</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">&#36820;&#22238;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#31867;&#22411;</th>
+        <th>&#25551;&#36848;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Int64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot_Start.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L84">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+  </span>
+  <a id="Kaiheila_Client_Bot_Start_" data-uid="Kaiheila.Client.Bot.Start*"></a>
+  <h4 id="Kaiheila_Client_Bot_Start" data-uid="Kaiheila.Client.Bot.Start">Start()</h4>
+  <div class="markdown level1 summary"><p>连接到 Kaiheila 服务器。</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">&#22768;&#26126;</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Start()</code></pre>
+  </div>
+  <h5 id="Kaiheila_Client_Bot_Start_remarks">&#22791;&#27880;</h5>
+  <div class="markdown level1 remarks"><p>在连接到 Kaiheila 服务器之后，<a class="xref" href="Kaiheila.Client.Bot.html#Kaiheila_Client_Bot_Event">Event</a> 就会推送所有的服务器消息。</p>
+<p>如果你不需要接收服务器消息，请使用 <a class="xref" href="Kaiheila.Client.Rest.RestClient.html">RestClient</a>。<a class="xref" href="Kaiheila.Client.Rest.RestClient.html">RestClient</a> 实例无需调用 <a class="xref" href="Kaiheila.Client.Bot.html#Kaiheila_Client_Bot_Start">Start()</a> 即可发送 <a class="xref" href="Kaiheila.Events.KhEventBase.html">KhEventBase</a>。</p>
+</div>
+  <h3 id="extensionmethods">&#25193;&#23637;&#26041;&#27861;</h3>
+  <div>
+      <a class="xref" href="Kaiheila.Client.BotExtensions.html#Kaiheila_Client_BotExtensions_Send_Kaiheila_Client_Bot_Kaiheila_Events_KhEventBase_">BotExtensions.Send(Bot, KhEventBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="Kaiheila.Client.BotExtensions.html#Kaiheila_Client_BotExtensions_Send_Kaiheila_Client_Bot_IList_Kaiheila_Events_KhEventBase__Kaiheila_Events_Combiners_KhEventCombinerHost_">BotExtensions.Send(Bot, IList&lt;KhEventBase&gt;, KhEventCombinerHost)</a>
+  </div>
+  <h3 id="seealso">&#35831;&#21442;&#38405;</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Kaiheila.Client.Rest.RestClient.html">RestClient</a></div>
+      <div><a class="xref" href="Kaiheila.Client.WebHook.WebHookClient.html">WebHookClient</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/new/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/apiSpec/new?filename=Kaiheila_Client_Bot.md&amp;value=---%0Auid%3A%20Kaiheila.Client.Bot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#25913;&#21892;&#27492;&#25991;&#26723;</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kaiheila-community/kaiheila-dotnet/blob/c90a777241a52419807b3ae7b6448fbe6f6a6d7a/src/core/Client/Bot.cs/#L48" class="contribution-link">&#26597;&#30475;&#28304;&#20195;&#30721;</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>&#26412;&#25991;&#20869;&#23481;</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">&#22238;&#21040;&#39030;&#31471;</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/noelboss/featherlight@master/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../styles/plugin-featherlight.js"></script>
+  </body>
+</html>

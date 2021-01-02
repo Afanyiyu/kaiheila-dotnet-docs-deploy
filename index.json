@@ -1,0 +1,337 @@
+{
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "API 浏览器",
+    "keywords": "Kaiheila.NET API 浏览器 欢迎使用 Kaiheila.NET API 浏览器！在左面的目录树中寻找并查看你需要的 API。"
+  },
+  "api/Kaiheila.Assets.AssetsHelper.html": {
+    "href": "api/Kaiheila.Assets.AssetsHelper.html",
+    "title": "AssetsHelper 类",
+    "keywords": "AssetsHelper 类 继承 System.Object AssetsHelper 命名空间 : Kaiheila.Assets 程序集 : kaiheila-dotnet.dll 语法 public static class AssetsHelper : object 方法 | 改善此文档 查看源代码 GetAssetFile(String) 声明 public static Task<Stream> GetAssetFile(string url) 参数 类型 名称 描述 System.String url 返回 类型 描述 Task < Stream > | 改善此文档 查看源代码 GetAssetType(String) 声明 public static string GetAssetType(string path) 参数 类型 名称 描述 System.String path 返回 类型 描述 System.String"
+  },
+  "api/Kaiheila.Assets.html": {
+    "href": "api/Kaiheila.Assets.html",
+    "title": "Kaiheila.Assets 命名空间",
+    "keywords": "Kaiheila.Assets 命名空间 类 AssetsHelper"
+  },
+  "api/Kaiheila.Client.AuthorizationType.html": {
+    "href": "api/Kaiheila.Client.AuthorizationType.html",
+    "title": "AuthorizationType 枚举",
+    "keywords": "AuthorizationType 枚举 命名空间 : Kaiheila.Client 程序集 : kaiheila-dotnet.dll 语法 public enum AuthorizationType : int 字段 名称 描述 Bot Oauth2"
+  },
+  "api/Kaiheila.Client.Bot.html": {
+    "href": "api/Kaiheila.Client.Bot.html",
+    "title": "Bot 类",
+    "keywords": "Bot 类 Kaiheila 机器人。 继承 System.Object Bot RestClient ZeroClient 命名空间 : Kaiheila.Client 程序集 : kaiheila-dotnet.dll 语法 public abstract class Bot : IDisposable 备注 Bot 类是所有 Kaiheila 机器人的基类。 Bot 类中提供了诸如 Start() 和 Dispose() 等公用方法。 Bot 类是一个抽象类。你需要使用其派生类来初始化 Kaiheila 机器人。 示例 下面的示例演示了如何创建一个 WebHookClient 实例并连接。 namespace BotExample { public static class Program { public static void Main(string[] args) { Bot bot = WebHookClient.CreateWebHookClient() // 使用「WebHookClient」来创建 .Configure(options => { options .Listen(8000) // 要监听的端口 .UseEncryptKey(\"VYDVSU\") // 「开发者中心」中提供的 Encrypt Key .UseVerifyToken(\"JEe-o85KiCd78fi\") // 「开发者中心」中提供的 Verify Token .UseBotAuthorization(\"1E/3p7EClDQ=/Fro4cT47ipnqcERGFDvfQw==\"); // 「开发者中心」中提供的 Token }).Build(); // 创建「WebHookClient」 bot.Start(); // 启动机器人 } } } 构造函数 | 改善此文档 查看源代码 Bot() 声明 protected Bot() 字段 | 改善此文档 查看源代码 EventObserver 声明 protected IObserver<KhEventBase> EventObserver 字段值 类型 描述 IObserver < KhEventBase > 属性 | 改善此文档 查看源代码 Event 机器人事件的 Observable。 声明 public IObservable<KhEventBase> Event { get; protected set; } 属性值 类型 描述 IObservable < KhEventBase > 方法 | 改善此文档 查看源代码 Dispose() 断开 Bot 与 Kaiheila 服务器的连接，并释放所有资源。 声明 public abstract void Dispose() 备注 在执行一次 Dispose() 方法之后，该对象的所有资源将会立即被销毁。 若要再次使用机器人，请创建一个新的 Bot 实例。 | 改善此文档 查看源代码 SendTextMessage(Int32, Int64, String, String) 声明 protected abstract Task<(string, long)> SendTextMessage(int type, long channel, string content, string quote = null) 参数 类型 名称 描述 System.Int32 type System.Int64 channel System.String content System.String quote 返回 类型 描述 Task < System.ValueTuple < System.String , System.Int64 >> | 改善此文档 查看源代码 Start() 连接到 Kaiheila 服务器。 声明 public abstract void Start() 备注 在连接到 Kaiheila 服务器之后， Event 就会推送所有的服务器消息。 如果你不需要接收服务器消息，请使用 RestClient 。 RestClient 实例无需调用 Start() 即可发送 KhEventBase 。 扩展方法 BotExtensions.Send(Bot, KhEventBase) BotExtensions.Send(Bot, IList<KhEventBase>, KhEventCombinerHost) 请参阅 RestClient WebHookClient"
+  },
+  "api/Kaiheila.Client.BotExtensions.html": {
+    "href": "api/Kaiheila.Client.BotExtensions.html",
+    "title": "BotExtensions 类",
+    "keywords": "BotExtensions 类 继承 System.Object BotExtensions 命名空间 : Kaiheila.Client 程序集 : kaiheila-dotnet.dll 语法 public static class BotExtensions : object 方法 | 改善此文档 查看源代码 Send(Bot, IList<KhEventBase>, KhEventCombinerHost) 声明 public static Task<Bot> Send(this Bot bot, IList<KhEventBase> khEvents, KhEventCombinerHost combinerHost = null) 参数 类型 名称 描述 Bot bot IList < KhEventBase > khEvents KhEventCombinerHost combinerHost 返回 类型 描述 Task < Bot > | 改善此文档 查看源代码 Send(Bot, KhEventBase) 声明 public static Task<Bot> Send(this Bot bot, KhEventBase khEvent) 参数 类型 名称 描述 Bot bot KhEventBase khEvent 返回 类型 描述 Task < Bot > | 改善此文档 查看源代码 Send(Task<Bot>, IList<KhEventBase>, KhEventCombinerHost) 声明 public static Task<Bot> Send(this Task<Bot> task, IList<KhEventBase> khEvents, KhEventCombinerHost combinerHost = null) 参数 类型 名称 描述 Task < Bot > task IList < KhEventBase > khEvents KhEventCombinerHost combinerHost 返回 类型 描述 Task < Bot > | 改善此文档 查看源代码 Send(Task<Bot>, KhEventBase) 声明 public static Task<Bot> Send(this Task<Bot> task, KhEventBase khEvent) 参数 类型 名称 描述 Task < Bot > task KhEventBase khEvent 返回 类型 描述 Task < Bot > | 改善此文档 查看源代码 UseBotAuthorization(BotOptions, String) 声明 public static BotOptions UseBotAuthorization(this BotOptions options, string token) 参数 类型 名称 描述 BotOptions options System.String token 返回 类型 描述 BotOptions | 改善此文档 查看源代码 UseOauth2Authorization(BotOptions, String) 声明 public static BotOptions UseOauth2Authorization(this BotOptions options, string token) 参数 类型 名称 描述 BotOptions options System.String token 返回 类型 描述 BotOptions"
+  },
+  "api/Kaiheila.Client.BotOptions.html": {
+    "href": "api/Kaiheila.Client.BotOptions.html",
+    "title": "BotOptions 类",
+    "keywords": "BotOptions 类 继承 System.Object BotOptions RestClientOptions 命名空间 : Kaiheila.Client 程序集 : kaiheila-dotnet.dll 语法 public class BotOptions : object 属性 | 改善此文档 查看源代码 AuthorizationHeader 声明 public string AuthorizationHeader { get; set; } 属性值 类型 描述 System.String | 改善此文档 查看源代码 AuthorizationType 声明 public AuthorizationType AuthorizationType { get; set; } 属性值 类型 描述 AuthorizationType 扩展方法 BotExtensions.UseBotAuthorization(BotOptions, String) BotExtensions.UseOauth2Authorization(BotOptions, String)"
+  },
+  "api/Kaiheila.Client.html": {
+    "href": "api/Kaiheila.Client.html",
+    "title": "Kaiheila.Client 命名空间",
+    "keywords": "Kaiheila.Client 命名空间 类 Bot Kaiheila 机器人。 BotExtensions BotOptions ZeroClient 枚举 AuthorizationType"
+  },
+  "api/Kaiheila.Client.Rest.html": {
+    "href": "api/Kaiheila.Client.Rest.html",
+    "title": "Kaiheila.Client.Rest 命名空间",
+    "keywords": "Kaiheila.Client.Rest 命名空间 类 RestClient RestClientBuilder RestClientException RestClientExtensions RestClientOptions"
+  },
+  "api/Kaiheila.Client.Rest.RestClient.html": {
+    "href": "api/Kaiheila.Client.Rest.RestClient.html",
+    "title": "RestClient 类",
+    "keywords": "RestClient 类 继承 System.Object Bot RestClient WebHookClient 继承成员 Bot.Event Bot.EventObserver 命名空间 : Kaiheila.Client.Rest 程序集 : kaiheila-dotnet.dll 语法 public class RestClient : Bot 字段 | 改善此文档 查看源代码 Options 声明 public readonly RestClientOptions Options 字段值 类型 描述 RestClientOptions 方法 | 改善此文档 查看源代码 CreateRestClient() 声明 public static RestClientBuilder CreateRestClient() 返回 类型 描述 RestClientBuilder | 改善此文档 查看源代码 Dispose() 声明 public override void Dispose() 重写 Bot.Dispose() | 改善此文档 查看源代码 SendTextMessage(Int32, Int64, String, String) 声明 protected override Task<(string, long)> SendTextMessage(int type, long channel, string content, string quote = null) 参数 类型 名称 描述 System.Int32 type System.Int64 channel System.String content System.String quote 返回 类型 描述 Task < System.ValueTuple < System.String , System.Int64 >> 重写 Bot.SendTextMessage(Int32, Int64, String, String) | 改善此文档 查看源代码 Start() 声明 public override void Start() 重写 Bot.Start() 扩展方法 BotExtensions.Send(Bot, KhEventBase) BotExtensions.Send(Bot, IList<KhEventBase>, KhEventCombinerHost)"
+  },
+  "api/Kaiheila.Client.Rest.RestClientBuilder.html": {
+    "href": "api/Kaiheila.Client.Rest.RestClientBuilder.html",
+    "title": "RestClientBuilder 类",
+    "keywords": "RestClientBuilder 类 继承 System.Object RestClientBuilder 命名空间 : Kaiheila.Client.Rest 程序集 : kaiheila-dotnet.dll 语法 public class RestClientBuilder : object 方法 | 改善此文档 查看源代码 Configure(Action<RestClientOptions>) 声明 public RestClientBuilder Configure(Action<RestClientOptions> configureClient) 参数 类型 名称 描述 Action < RestClientOptions > configureClient 返回 类型 描述 RestClientBuilder 扩展方法 RestClientExtensions.Build(RestClientBuilder)"
+  },
+  "api/Kaiheila.Client.Rest.RestClientException.html": {
+    "href": "api/Kaiheila.Client.Rest.RestClientException.html",
+    "title": "RestClientException 类",
+    "keywords": "RestClientException 类 继承 System.Object RestClientException 命名空间 : Kaiheila.Client.Rest 程序集 : kaiheila-dotnet.dll 语法 public class RestClientException : Exception 构造函数 | 改善此文档 查看源代码 RestClientException() 声明 public RestClientException() | 改善此文档 查看源代码 RestClientException(Int32, String) 声明 public RestClientException(int errCode, string message) 参数 类型 名称 描述 System.Int32 errCode System.String message | 改善此文档 查看源代码 RestClientException(Int32, String, Exception) 声明 public RestClientException(int errCode, string message, Exception inner) 参数 类型 名称 描述 System.Int32 errCode System.String message Exception inner 属性 | 改善此文档 查看源代码 ErrCode 声明 public int ErrCode { get; set; } 属性值 类型 描述 System.Int32"
+  },
+  "api/Kaiheila.Client.Rest.RestClientExtensions.html": {
+    "href": "api/Kaiheila.Client.Rest.RestClientExtensions.html",
+    "title": "RestClientExtensions 类",
+    "keywords": "RestClientExtensions 类 继承 System.Object RestClientExtensions 命名空间 : Kaiheila.Client.Rest 程序集 : kaiheila-dotnet.dll 语法 public static class RestClientExtensions : object 方法 | 改善此文档 查看源代码 Build(RestClientBuilder) 声明 public static RestClient Build(this RestClientBuilder builder) 参数 类型 名称 描述 RestClientBuilder builder 返回 类型 描述 RestClient | 改善此文档 查看源代码 UseAPIVersion(RestClientOptions, Int32) 声明 public static RestClientOptions UseAPIVersion(this RestClientOptions options, int apiVersion = 0) 参数 类型 名称 描述 RestClientOptions options System.Int32 apiVersion 返回 类型 描述 RestClientOptions | 改善此文档 查看源代码 UseBaseUrl(RestClientOptions, String) 声明 public static RestClientOptions UseBaseUrl(this RestClientOptions options, string baseUrl) 参数 类型 名称 描述 RestClientOptions options System.String baseUrl 返回 类型 描述 RestClientOptions | 改善此文档 查看源代码 UseLatestAPI(RestClientOptions, Int32) 声明 public static RestClientOptions UseLatestAPI(this RestClientOptions options, int apiVersion = 0) 参数 类型 名称 描述 RestClientOptions options System.Int32 apiVersion 返回 类型 描述 RestClientOptions"
+  },
+  "api/Kaiheila.Client.Rest.RestClientOptions.html": {
+    "href": "api/Kaiheila.Client.Rest.RestClientOptions.html",
+    "title": "RestClientOptions 类",
+    "keywords": "RestClientOptions 类 继承 System.Object BotOptions RestClientOptions WebHookClientOptions 继承成员 BotOptions.AuthorizationType BotOptions.AuthorizationHeader 命名空间 : Kaiheila.Client.Rest 程序集 : kaiheila-dotnet.dll 语法 public class RestClientOptions : BotOptions 属性 | 改善此文档 查看源代码 APIVersion 声明 public int APIVersion { get; set; } 属性值 类型 描述 System.Int32 | 改善此文档 查看源代码 BaseUrl 声明 public string BaseUrl { get; set; } 属性值 类型 描述 System.String 扩展方法 BotExtensions.UseBotAuthorization(BotOptions, String) BotExtensions.UseOauth2Authorization(BotOptions, String) RestClientExtensions.UseBaseUrl(RestClientOptions, String) RestClientExtensions.UseLatestAPI(RestClientOptions, Int32) RestClientExtensions.UseAPIVersion(RestClientOptions, Int32)"
+  },
+  "api/Kaiheila.Client.V2.html": {
+    "href": "api/Kaiheila.Client.V2.html",
+    "title": "Kaiheila.Client.V2 命名空间",
+    "keywords": "Kaiheila.Client.V2 命名空间 类 V2Client Kaiheila V2机器人。"
+  },
+  "api/Kaiheila.Client.V2.V2Client.html": {
+    "href": "api/Kaiheila.Client.V2.V2Client.html",
+    "title": "V2Client 类",
+    "keywords": "V2Client 类 Kaiheila V2机器人。 继承 System.Object V2Client 命名空间 : Kaiheila.Client.V2 程序集 : kaiheila-dotnet-client-v2.dll 语法 public sealed class V2Client : BotBase 构造函数 | 改善此文档 查看源代码 V2Client(String, Uri) 初始化Kaiheila V2机器人。 声明 public V2Client(string auth, Uri uri) 参数 类型 名称 描述 System.String auth Kaiheila鉴权使用的Cookie中的auth字段。 Uri uri WebSocket连接地址。 方法 | 改善此文档 查看源代码 Dispose() 声明 public override void Dispose() | 改善此文档 查看源代码 GetChannelState(Int64) 声明 public override Task<KhChannel> GetChannelState(long channelId) 参数 类型 名称 描述 System.Int64 channelId 返回 类型 描述 Task < KhChannel > | 改善此文档 查看源代码 GetFriends(KhFriendsType) 声明 public override Task<List<KhUser>> GetFriends(KhFriendsType type) 参数 类型 名称 描述 KhFriendsType type 返回 类型 描述 Task < List < KhUser >> | 改善此文档 查看源代码 GetUserState(Int64) 声明 public override Task<KhUser> GetUserState(long user = null) 参数 类型 名称 描述 System.Int64 user 返回 类型 描述 Task < KhUser > | 改善此文档 查看源代码 SendImageMessage(Int64, String, String) 声明 public override Task SendImageMessage(long channel, string imageUrl, string imageName) 参数 类型 名称 描述 System.Int64 channel System.String imageUrl System.String imageName 返回 类型 描述 Task | 改善此文档 查看源代码 SendTextMessage(Int64, String) 声明 public override Task SendTextMessage(long channel, string message) 参数 类型 名称 描述 System.Int64 channel System.String message 返回 类型 描述 Task | 改善此文档 查看源代码 UploadFile(String, Int64, String) 声明 public override Task<KhEventFile> UploadFile(string name, long channel, string file) 参数 类型 名称 描述 System.String name System.Int64 channel System.String file 返回 类型 描述 Task < KhEventFile > | 改善此文档 查看源代码 UploadImage(String, Int64, String) 声明 public override Task<KhEventImage> UploadImage(string name, long channel, string file) 参数 类型 名称 描述 System.String name System.Int64 channel System.String file 返回 类型 描述 Task < KhEventImage >"
+  },
+  "api/Kaiheila.Client.WebHook.html": {
+    "href": "api/Kaiheila.Client.WebHook.html",
+    "title": "Kaiheila.Client.WebHook 命名空间",
+    "keywords": "Kaiheila.Client.WebHook 命名空间 类 WebHookClient WebHookClientBuilder WebHookClientChallengeHandlerExtensions WebHookClientDecompressorExtensions WebHookClientDecompressorMiddleware WebHookClientDecryptorExtensions WebHookClientDecryptorMiddleware WebHookClientDeserializerExtensions WebHookClientDeserializerMiddleware WebHookClientEmitterExtensions WebHookClientEmitterMiddleware WebHookClientException WebHookClientExceptionHandlerExtensions WebHookClientExceptionHandlerMiddleware WebHookClientExtensions WebHookClientOptions WebHookClientShorterExtensions WebHookClientShorterMiddleware"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClient.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClient.html",
+    "title": "WebHookClient 类",
+    "keywords": "WebHookClient 类 继承 System.Object Bot RestClient WebHookClient 继承成员 RestClient.CreateRestClient() RestClient.SendTextMessage(Int32, Int64, String, String) Bot.Event Bot.EventObserver 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClient : RestClient 字段 | 改善此文档 查看源代码 Options 声明 public readonly WebHookClientOptions Options 字段值 类型 描述 WebHookClientOptions 方法 | 改善此文档 查看源代码 CreateWebHookClient() 声明 public static WebHookClientBuilder CreateWebHookClient() 返回 类型 描述 WebHookClientBuilder | 改善此文档 查看源代码 Dispose() 声明 public override void Dispose() 重写 RestClient.Dispose() | 改善此文档 查看源代码 Start() 声明 public override void Start() 重写 RestClient.Start() 扩展方法 BotExtensions.Send(Bot, KhEventBase) BotExtensions.Send(Bot, IList<KhEventBase>, KhEventCombinerHost)"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientBuilder.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientBuilder.html",
+    "title": "WebHookClientBuilder 类",
+    "keywords": "WebHookClientBuilder 类 继承 System.Object WebHookClientBuilder 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientBuilder : object 方法 | 改善此文档 查看源代码 Configure(Action<WebHookClientOptions>) 声明 public WebHookClientBuilder Configure(Action<WebHookClientOptions> configureClient) 参数 类型 名称 描述 Action < WebHookClientOptions > configureClient 返回 类型 描述 WebHookClientBuilder 扩展方法 WebHookClientExtensions.Build(WebHookClientBuilder)"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientChallengeHandlerExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientChallengeHandlerExtensions.html",
+    "title": "WebHookClientChallengeHandlerExtensions 类",
+    "keywords": "WebHookClientChallengeHandlerExtensions 类 继承 System.Object WebHookClientChallengeHandlerExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientChallengeHandlerExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientDecompressorExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientDecompressorExtensions.html",
+    "title": "WebHookClientDecompressorExtensions 类",
+    "keywords": "WebHookClientDecompressorExtensions 类 继承 System.Object WebHookClientDecompressorExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientDecompressorExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientDecompressorMiddleware.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientDecompressorMiddleware.html",
+    "title": "WebHookClientDecompressorMiddleware 类",
+    "keywords": "WebHookClientDecompressorMiddleware 类 继承 System.Object WebHookClientDecompressorMiddleware 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientDecompressorMiddleware : object 构造函数 | 改善此文档 查看源代码 WebHookClientDecompressorMiddleware(RequestDelegate) 声明 public WebHookClientDecompressorMiddleware(RequestDelegate next) 参数 类型 名称 描述 RequestDelegate next 方法 | 改善此文档 查看源代码 InvokeAsync(HttpContext) 声明 public Task InvokeAsync(HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientDecryptorExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientDecryptorExtensions.html",
+    "title": "WebHookClientDecryptorExtensions 类",
+    "keywords": "WebHookClientDecryptorExtensions 类 继承 System.Object WebHookClientDecryptorExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientDecryptorExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientDecryptorMiddleware.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientDecryptorMiddleware.html",
+    "title": "WebHookClientDecryptorMiddleware 类",
+    "keywords": "WebHookClientDecryptorMiddleware 类 继承 System.Object WebHookClientDecryptorMiddleware 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientDecryptorMiddleware : object 构造函数 | 改善此文档 查看源代码 WebHookClientDecryptorMiddleware(RequestDelegate, IOptions<WebHookClientOptions>) 声明 public WebHookClientDecryptorMiddleware(RequestDelegate next, IOptions<WebHookClientOptions> options) 参数 类型 名称 描述 RequestDelegate next IOptions < WebHookClientOptions > options 方法 | 改善此文档 查看源代码 InvokeAsync(HttpContext) 声明 public Task InvokeAsync(HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientDeserializerExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientDeserializerExtensions.html",
+    "title": "WebHookClientDeserializerExtensions 类",
+    "keywords": "WebHookClientDeserializerExtensions 类 继承 System.Object WebHookClientDeserializerExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientDeserializerExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientDeserializerMiddleware.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientDeserializerMiddleware.html",
+    "title": "WebHookClientDeserializerMiddleware 类",
+    "keywords": "WebHookClientDeserializerMiddleware 类 继承 System.Object WebHookClientDeserializerMiddleware 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientDeserializerMiddleware : object 构造函数 | 改善此文档 查看源代码 WebHookClientDeserializerMiddleware(RequestDelegate) 声明 public WebHookClientDeserializerMiddleware(RequestDelegate next) 参数 类型 名称 描述 RequestDelegate next 方法 | 改善此文档 查看源代码 InvokeAsync(HttpContext) 声明 public Task InvokeAsync(HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientEmitterExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientEmitterExtensions.html",
+    "title": "WebHookClientEmitterExtensions 类",
+    "keywords": "WebHookClientEmitterExtensions 类 继承 System.Object WebHookClientEmitterExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientEmitterExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientEmitterMiddleware.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientEmitterMiddleware.html",
+    "title": "WebHookClientEmitterMiddleware 类",
+    "keywords": "WebHookClientEmitterMiddleware 类 继承 System.Object WebHookClientEmitterMiddleware 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientEmitterMiddleware : object 构造函数 | 改善此文档 查看源代码 WebHookClientEmitterMiddleware(RequestDelegate, IOptions<Func<IObserver<JToken>>>) 声明 public WebHookClientEmitterMiddleware(RequestDelegate next, IOptions<Func<IObserver<JToken>>> getObserver) 参数 类型 名称 描述 RequestDelegate next IOptions < Func < IObserver < JToken >>> getObserver 方法 | 改善此文档 查看源代码 InvokeAsync(HttpContext) 声明 public Task InvokeAsync(HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientException.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientException.html",
+    "title": "WebHookClientException 类",
+    "keywords": "WebHookClientException 类 继承 System.Object WebHookClientException 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientException : Exception 构造函数 | 改善此文档 查看源代码 WebHookClientException() 声明 public WebHookClientException() | 改善此文档 查看源代码 WebHookClientException(String, String) 声明 public WebHookClientException(string message, string middlewareName) 参数 类型 名称 描述 System.String message System.String middlewareName | 改善此文档 查看源代码 WebHookClientException(String, String, Exception) 声明 public WebHookClientException(string message, string middlewareName, Exception inner) 参数 类型 名称 描述 System.String message System.String middlewareName Exception inner 属性 | 改善此文档 查看源代码 MiddlewareName 声明 public string MiddlewareName { get; set; } 属性值 类型 描述 System.String"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerExtensions.html",
+    "title": "WebHookClientExceptionHandlerExtensions 类",
+    "keywords": "WebHookClientExceptionHandlerExtensions 类 继承 System.Object WebHookClientExceptionHandlerExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientExceptionHandlerExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerMiddleware.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerMiddleware.html",
+    "title": "WebHookClientExceptionHandlerMiddleware 类",
+    "keywords": "WebHookClientExceptionHandlerMiddleware 类 继承 System.Object WebHookClientExceptionHandlerMiddleware 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientExceptionHandlerMiddleware : object 构造函数 | 改善此文档 查看源代码 WebHookClientExceptionHandlerMiddleware(RequestDelegate) 声明 public WebHookClientExceptionHandlerMiddleware(RequestDelegate next) 参数 类型 名称 描述 RequestDelegate next 方法 | 改善此文档 查看源代码 InvokeAsync(HttpContext) 声明 public Task InvokeAsync(HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientExtensions.html",
+    "title": "WebHookClientExtensions 类",
+    "keywords": "WebHookClientExtensions 类 继承 System.Object WebHookClientExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientExtensions : object 方法 | 改善此文档 查看源代码 Build(WebHookClientBuilder) 声明 public static WebHookClient Build(this WebHookClientBuilder builder) 参数 类型 名称 描述 WebHookClientBuilder builder 返回 类型 描述 WebHookClient | 改善此文档 查看源代码 Listen(WebHookClientOptions, Int32) 声明 public static WebHookClientOptions Listen(this WebHookClientOptions options, int port) 参数 类型 名称 描述 WebHookClientOptions options System.Int32 port 返回 类型 描述 WebHookClientOptions | 改善此文档 查看源代码 UseEncryptKey(WebHookClientOptions, String) 声明 public static WebHookClientOptions UseEncryptKey(this WebHookClientOptions options, string encryptKey) 参数 类型 名称 描述 WebHookClientOptions options System.String encryptKey 返回 类型 描述 WebHookClientOptions | 改善此文档 查看源代码 UseVerifyToken(WebHookClientOptions, String) 声明 public static WebHookClientOptions UseVerifyToken(this WebHookClientOptions options, string verifyToken) 参数 类型 名称 描述 WebHookClientOptions options System.String verifyToken 返回 类型 描述 WebHookClientOptions"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientOptions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientOptions.html",
+    "title": "WebHookClientOptions 类",
+    "keywords": "WebHookClientOptions 类 继承 System.Object BotOptions RestClientOptions WebHookClientOptions 实现 IEventParserClientOptions 继承成员 RestClientOptions.BaseUrl RestClientOptions.APIVersion BotOptions.AuthorizationType BotOptions.AuthorizationHeader 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientOptions : RestClientOptions, IEventParserClientOptions 属性 | 改善此文档 查看源代码 EncryptKey 声明 public string EncryptKey { get; set; } 属性值 类型 描述 System.String | 改善此文档 查看源代码 EventParser 声明 public EventParserHost EventParser { get; set; } 属性值 类型 描述 EventParserHost | 改善此文档 查看源代码 Port 声明 public int Port { get; set; } 属性值 类型 描述 System.Int32 | 改善此文档 查看源代码 VerifyToken 声明 public string VerifyToken { get; set; } 属性值 类型 描述 System.String 实现 IEventParserClientOptions 扩展方法 BotExtensions.UseBotAuthorization(BotOptions, String) BotExtensions.UseOauth2Authorization(BotOptions, String) RestClientExtensions.UseBaseUrl(RestClientOptions, String) RestClientExtensions.UseLatestAPI(RestClientOptions, Int32) RestClientExtensions.UseAPIVersion(RestClientOptions, Int32) WebHookClientExtensions.UseVerifyToken(WebHookClientOptions, String) WebHookClientExtensions.UseEncryptKey(WebHookClientOptions, String) WebHookClientExtensions.Listen(WebHookClientOptions, Int32)"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientShorterExtensions.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientShorterExtensions.html",
+    "title": "WebHookClientShorterExtensions 类",
+    "keywords": "WebHookClientShorterExtensions 类 继承 System.Object WebHookClientShorterExtensions 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public static class WebHookClientShorterExtensions : object"
+  },
+  "api/Kaiheila.Client.WebHook.WebHookClientShorterMiddleware.html": {
+    "href": "api/Kaiheila.Client.WebHook.WebHookClientShorterMiddleware.html",
+    "title": "WebHookClientShorterMiddleware 类",
+    "keywords": "WebHookClientShorterMiddleware 类 继承 System.Object WebHookClientShorterMiddleware 命名空间 : Kaiheila.Client.WebHook 程序集 : kaiheila-dotnet.dll 语法 public class WebHookClientShorterMiddleware : object 构造函数 | 改善此文档 查看源代码 WebHookClientShorterMiddleware(RequestDelegate) 声明 public WebHookClientShorterMiddleware(RequestDelegate next) 参数 类型 名称 描述 RequestDelegate next 方法 | 改善此文档 查看源代码 InvokeAsync(HttpContext) 声明 public Task InvokeAsync(HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Client.ZeroClient.html": {
+    "href": "api/Kaiheila.Client.ZeroClient.html",
+    "title": "ZeroClient 类",
+    "keywords": "ZeroClient 类 继承 System.Object Bot ZeroClient 继承成员 Bot.Event Bot.EventObserver 命名空间 : Kaiheila.Client 程序集 : kaiheila-dotnet.dll 语法 public class ZeroClient : Bot 方法 | 改善此文档 查看源代码 Dispose() 声明 public override void Dispose() 重写 Bot.Dispose() | 改善此文档 查看源代码 SendTextMessage(Int32, Int64, String, String) 声明 protected override Task<(string, long)> SendTextMessage(int type, long channel, string content, string quote = null) 参数 类型 名称 描述 System.Int32 type System.Int64 channel System.String content System.String quote 返回 类型 描述 Task < System.ValueTuple < System.String , System.Int64 >> 重写 Bot.SendTextMessage(Int32, Int64, String, String) | 改善此文档 查看源代码 Start() 声明 public override void Start() 重写 Bot.Start() 扩展方法 BotExtensions.Send(Bot, KhEventBase) BotExtensions.Send(Bot, IList<KhEventBase>, KhEventCombinerHost)"
+  },
+  "api/Kaiheila.Data.html": {
+    "href": "api/Kaiheila.Data.html",
+    "title": "Kaiheila.Data 命名空间",
+    "keywords": "Kaiheila.Data 命名空间 类 KhChannel KhFriends KhUser 接口 IKhEventUser 枚举 KhFriendsType"
+  },
+  "api/Kaiheila.Data.IKhEventUser.html": {
+    "href": "api/Kaiheila.Data.IKhEventUser.html",
+    "title": "IKhEventUser 接口",
+    "keywords": "IKhEventUser 接口 命名空间 : Kaiheila.Data 程序集 : kaiheila-dotnet.dll 语法 public interface IKhEventUser 属性 | 改善此文档 查看源代码 User 声明 KhUser User { get; set; } 属性值 类型 描述 KhUser"
+  },
+  "api/Kaiheila.Data.KhChannel.html": {
+    "href": "api/Kaiheila.Data.KhChannel.html",
+    "title": "KhChannel 类",
+    "keywords": "KhChannel 类 继承 System.Object KhChannel 命名空间 : Kaiheila.Data 程序集 : kaiheila-dotnet.dll 语法 public class KhChannel : object 字段 | 改善此文档 查看源代码 ChannelId 声明 public long ChannelId 字段值 类型 描述 System.Int64 | 改善此文档 查看源代码 ChannelName 声明 public string ChannelName 字段值 类型 描述 System.String | 改善此文档 查看源代码 Guild 声明 public long Guild 字段值 类型 描述 System.Int64"
+  },
+  "api/Kaiheila.Data.KhFriends.html": {
+    "href": "api/Kaiheila.Data.KhFriends.html",
+    "title": "KhFriends 类",
+    "keywords": "KhFriends 类 继承 System.Object KhFriends 命名空间 : Kaiheila.Data 程序集 : kaiheila-dotnet.dll 语法 public static class KhFriends : object 方法 | 改善此文档 查看源代码 GetTypeString(KhFriendsType) 声明 public static string GetTypeString(this KhFriendsType type) 参数 类型 名称 描述 KhFriendsType type 返回 类型 描述 System.String"
+  },
+  "api/Kaiheila.Data.KhFriendsType.html": {
+    "href": "api/Kaiheila.Data.KhFriendsType.html",
+    "title": "KhFriendsType 枚举",
+    "keywords": "KhFriendsType 枚举 命名空间 : Kaiheila.Data 程序集 : kaiheila-dotnet.dll 语法 public enum KhFriendsType : int 字段 名称 描述 Blocked Friend Request 扩展方法 KhFriends.GetTypeString()"
+  },
+  "api/Kaiheila.Data.KhUser.html": {
+    "href": "api/Kaiheila.Data.KhUser.html",
+    "title": "KhUser 类",
+    "keywords": "KhUser 类 继承 System.Object KhUser 命名空间 : Kaiheila.Data 程序集 : kaiheila-dotnet.dll 语法 public class KhUser : object 属性 | 改善此文档 查看源代码 Id 声明 public long Id { get; set; } 属性值 类型 描述 System.Int64 | 改善此文档 查看源代码 Nickname 声明 public string Nickname { get; set; } 属性值 类型 描述 System.String | 改善此文档 查看源代码 Username 声明 public string Username { get; set; } 属性值 类型 描述 System.String"
+  },
+  "api/Kaiheila.Events.Combiners.html": {
+    "href": "api/Kaiheila.Events.Combiners.html",
+    "title": "Kaiheila.Events.Combiners 命名空间",
+    "keywords": "Kaiheila.Events.Combiners 命名空间 类 KhEventCombinerAttribute KhEventCombinerBase KhEventCombinerHost Kaiheila事件合并器主机。 KhEventTextMessageCombiner"
+  },
+  "api/Kaiheila.Events.Combiners.KhEventCombinerAttribute.html": {
+    "href": "api/Kaiheila.Events.Combiners.KhEventCombinerAttribute.html",
+    "title": "KhEventCombinerAttribute 类",
+    "keywords": "KhEventCombinerAttribute 类 继承 System.Object KhEventCombinerAttribute 命名空间 : Kaiheila.Events.Combiners 程序集 : kaiheila-dotnet.dll 语法 public sealed class KhEventCombinerAttribute : Attribute 构造函数 | 改善此文档 查看源代码 KhEventCombinerAttribute(Type) 声明 public KhEventCombinerAttribute(Type type) 参数 类型 名称 描述 Type type 字段 | 改善此文档 查看源代码 Type 声明 public readonly Type Type 字段值 类型 描述 Type"
+  },
+  "api/Kaiheila.Events.Combiners.KhEventCombinerBase.html": {
+    "href": "api/Kaiheila.Events.Combiners.KhEventCombinerBase.html",
+    "title": "KhEventCombinerBase 类",
+    "keywords": "KhEventCombinerBase 类 继承 System.Object KhEventCombinerBase KhEventTextMessageCombiner 命名空间 : Kaiheila.Events.Combiners 程序集 : kaiheila-dotnet.dll 语法 public abstract class KhEventCombinerBase : object 方法 | 改善此文档 查看源代码 Combine(KhEventBase, KhEventBase) 声明 public abstract KhEventBase Combine(KhEventBase a, KhEventBase b) 参数 类型 名称 描述 KhEventBase a KhEventBase b 返回 类型 描述 KhEventBase"
+  },
+  "api/Kaiheila.Events.Combiners.KhEventCombinerHost.html": {
+    "href": "api/Kaiheila.Events.Combiners.KhEventCombinerHost.html",
+    "title": "KhEventCombinerHost 类",
+    "keywords": "KhEventCombinerHost 类 Kaiheila事件合并器主机。 继承 System.Object KhEventCombinerHost 命名空间 : Kaiheila.Events.Combiners 程序集 : kaiheila-dotnet.dll 语法 public class KhEventCombinerHost : object 构造函数 | 改善此文档 查看源代码 KhEventCombinerHost(ILogger<KhEventCombinerHost>) 初始化Kaiheila事件合并器主机。 声明 public KhEventCombinerHost(ILogger<KhEventCombinerHost> logger) 参数 类型 名称 描述 ILogger < KhEventCombinerHost > logger Kaiheila事件合并器主机日志记录器。 方法 | 改善此文档 查看源代码 Combine(KhEventBase, KhEventBase) 声明 public KhEventBase Combine(KhEventBase a, KhEventBase b) 参数 类型 名称 描述 KhEventBase a KhEventBase b 返回 类型 描述 KhEventBase"
+  },
+  "api/Kaiheila.Events.Combiners.KhEventTextMessageCombiner.html": {
+    "href": "api/Kaiheila.Events.Combiners.KhEventTextMessageCombiner.html",
+    "title": "KhEventTextMessageCombiner 类",
+    "keywords": "KhEventTextMessageCombiner 类 继承 System.Object KhEventCombinerBase KhEventTextMessageCombiner 命名空间 : Kaiheila.Events.Combiners 程序集 : kaiheila-dotnet.dll 语法 public class KhEventTextMessageCombiner : KhEventCombinerBase 方法 | 改善此文档 查看源代码 Combine(KhEventBase, KhEventBase) 声明 public override KhEventBase Combine(KhEventBase a, KhEventBase b) 参数 类型 名称 描述 KhEventBase a KhEventBase b 返回 类型 描述 KhEventBase 重写 KhEventCombinerBase.Combine(KhEventBase, KhEventBase)"
+  },
+  "api/Kaiheila.Events.EventParseException.html": {
+    "href": "api/Kaiheila.Events.EventParseException.html",
+    "title": "EventParseException 类",
+    "keywords": "EventParseException 类 继承 System.Object EventParseException 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public class EventParseException : Exception 构造函数 | 改善此文档 查看源代码 EventParseException(String, JToken, Exception) 声明 public EventParseException(string message, JToken eventPayload = null, Exception inner = null) 参数 类型 名称 描述 System.String message JToken eventPayload Exception inner 字段 | 改善此文档 查看源代码 EventPayload 声明 public JToken EventPayload 字段值 类型 描述 JToken"
+  },
+  "api/Kaiheila.Events.EventParserClientExtensions.html": {
+    "href": "api/Kaiheila.Events.EventParserClientExtensions.html",
+    "title": "EventParserClientExtensions 类",
+    "keywords": "EventParserClientExtensions 类 继承 System.Object EventParserClientExtensions 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public static class EventParserClientExtensions : object 方法 | 改善此文档 查看源代码 UseEventParserHost<T>(T, EventParserHost) 声明 public static T UseEventParserHost<T>(this T options, EventParserHost host) where T : IEventParserClientOptions 参数 类型 名称 描述 T options EventParserHost host 返回 类型 描述 T 类型参数 名称 描述 T"
+  },
+  "api/Kaiheila.Events.EventParserHost.html": {
+    "href": "api/Kaiheila.Events.EventParserHost.html",
+    "title": "EventParserHost 类",
+    "keywords": "EventParserHost 类 开黑啦事件解析主机。 继承 System.Object EventParserHost 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public class EventParserHost : object 构造函数 | 改善此文档 查看源代码 EventParserHost(ILogger<EventParserHost>) 声明 public EventParserHost(ILogger<EventParserHost> logger) 参数 类型 名称 描述 ILogger < EventParserHost > logger 方法 | 改善此文档 查看源代码 Parse(JToken) 声明 public Task<KhEventBase> Parse(JToken payload) 参数 类型 名称 描述 JToken payload 返回 类型 描述 Task < KhEventBase >"
+  },
+  "api/Kaiheila.Events.html": {
+    "href": "api/Kaiheila.Events.html",
+    "title": "Kaiheila.Events 命名空间",
+    "keywords": "Kaiheila.Events 命名空间 类 EventParseException EventParserClientExtensions EventParserHost 开黑啦事件解析主机。 KhEventAsset KhEventAttribute KhEventBase KhEventFile KhEventImage KhEventTextMessage 接口 IEventParserClientOptions"
+  },
+  "api/Kaiheila.Events.IEventParserClientOptions.html": {
+    "href": "api/Kaiheila.Events.IEventParserClientOptions.html",
+    "title": "IEventParserClientOptions 接口",
+    "keywords": "IEventParserClientOptions 接口 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public interface IEventParserClientOptions 属性 | 改善此文档 查看源代码 EventParser 声明 EventParserHost EventParser { get; set; } 属性值 类型 描述 EventParserHost 扩展方法 EventParserClientExtensions.UseEventParserHost<T>(T, EventParserHost)"
+  },
+  "api/Kaiheila.Events.KhEventAsset.html": {
+    "href": "api/Kaiheila.Events.KhEventAsset.html",
+    "title": "KhEventAsset 类",
+    "keywords": "KhEventAsset 类 继承 System.Object KhEventBase KhEventAsset KhEventFile KhEventImage 继承成员 KhEventBase.Raw KhEventBase.Id KhEventBase.Timestamp KhEventBase.TargetId KhEventBase.Content KhEventBase.Parse(JToken) KhEventBase.Send(Bot) 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public abstract class KhEventAsset : KhEventBase 构造函数 | 改善此文档 查看源代码 KhEventAsset(String, String) 声明 public KhEventAsset(string path, string name) 参数 类型 名称 描述 System.String path System.String name 字段 | 改善此文档 查看源代码 AssetsPrefix 声明 public const string AssetsPrefix = null 字段值 类型 描述 System.String | 改善此文档 查看源代码 Name 声明 public string Name 字段值 类型 描述 System.String | 改善此文档 查看源代码 Path 声明 public string Path 字段值 类型 描述 System.String | 改善此文档 查看源代码 Type 声明 public string Type 字段值 类型 描述 System.String 方法 | 改善此文档 查看源代码 GetUrl() 声明 public string GetUrl() 返回 类型 描述 System.String"
+  },
+  "api/Kaiheila.Events.KhEventAttribute.html": {
+    "href": "api/Kaiheila.Events.KhEventAttribute.html",
+    "title": "KhEventAttribute 类",
+    "keywords": "KhEventAttribute 类 继承 System.Object KhEventAttribute 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public sealed class KhEventAttribute : Attribute 构造函数 | 改善此文档 查看源代码 KhEventAttribute(String) 声明 public KhEventAttribute(string type) 参数 类型 名称 描述 System.String type 属性 | 改善此文档 查看源代码 Type 声明 public string Type { get; set; } 属性值 类型 描述 System.String"
+  },
+  "api/Kaiheila.Events.KhEventBase.html": {
+    "href": "api/Kaiheila.Events.KhEventBase.html",
+    "title": "KhEventBase 类",
+    "keywords": "KhEventBase 类 继承 System.Object KhEventBase KhEventAsset KhEventTextMessage 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public class KhEventBase : object 字段 | 改善此文档 查看源代码 Content 声明 public string Content 字段值 类型 描述 System.String | 改善此文档 查看源代码 Id 声明 public string Id 字段值 类型 描述 System.String | 改善此文档 查看源代码 Raw 声明 public string Raw 字段值 类型 描述 System.String | 改善此文档 查看源代码 TargetId 声明 public long TargetId 字段值 类型 描述 System.Int64 | 改善此文档 查看源代码 Timestamp 声明 public long Timestamp 字段值 类型 描述 System.Int64 方法 | 改善此文档 查看源代码 Parse(JToken) 声明 public virtual Task Parse(JToken payload) 参数 类型 名称 描述 JToken payload 返回 类型 描述 Task | 改善此文档 查看源代码 Send(Bot) 声明 public virtual Task Send(Bot bot) 参数 类型 名称 描述 Bot bot 返回 类型 描述 Task"
+  },
+  "api/Kaiheila.Events.KhEventFile.html": {
+    "href": "api/Kaiheila.Events.KhEventFile.html",
+    "title": "KhEventFile 类",
+    "keywords": "KhEventFile 类 继承 System.Object KhEventBase KhEventAsset KhEventFile 继承成员 KhEventAsset.AssetsPrefix KhEventAsset.Type KhEventAsset.Path KhEventAsset.Name KhEventAsset.GetUrl() KhEventBase.Raw KhEventBase.Id KhEventBase.Timestamp KhEventBase.TargetId KhEventBase.Content KhEventBase.Parse(JToken) KhEventBase.Send(Bot) 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public class KhEventFile : KhEventAsset 构造函数 | 改善此文档 查看源代码 KhEventFile(String, String, String) 声明 public KhEventFile(string path, string name, string extension) 参数 类型 名称 描述 System.String path System.String name System.String extension 字段 | 改善此文档 查看源代码 Extension 声明 public string Extension 字段值 类型 描述 System.String"
+  },
+  "api/Kaiheila.Events.KhEventImage.html": {
+    "href": "api/Kaiheila.Events.KhEventImage.html",
+    "title": "KhEventImage 类",
+    "keywords": "KhEventImage 类 继承 System.Object KhEventBase KhEventAsset KhEventImage 继承成员 KhEventAsset.AssetsPrefix KhEventAsset.Type KhEventAsset.Path KhEventAsset.Name KhEventAsset.GetUrl() KhEventBase.Raw KhEventBase.Id KhEventBase.Timestamp KhEventBase.TargetId KhEventBase.Content KhEventBase.Parse(JToken) KhEventBase.Send(Bot) 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public class KhEventImage : KhEventAsset 构造函数 | 改善此文档 查看源代码 KhEventImage(String, String) 声明 public KhEventImage(string path, string name) 参数 类型 名称 描述 System.String path System.String name"
+  },
+  "api/Kaiheila.Events.KhEventTextMessage.html": {
+    "href": "api/Kaiheila.Events.KhEventTextMessage.html",
+    "title": "KhEventTextMessage 类",
+    "keywords": "KhEventTextMessage 类 继承 System.Object KhEventBase KhEventTextMessage 实现 IKhEventUser 继承成员 KhEventBase.Raw KhEventBase.Id KhEventBase.Timestamp KhEventBase.TargetId KhEventBase.Content 命名空间 : Kaiheila.Events 程序集 : kaiheila-dotnet.dll 语法 public class KhEventTextMessage : KhEventBase, IKhEventUser 属性 | 改善此文档 查看源代码 Quote 声明 public string Quote { get; set; } 属性值 类型 描述 System.String | 改善此文档 查看源代码 User 声明 public KhUser User { get; set; } 属性值 类型 描述 KhUser 方法 | 改善此文档 查看源代码 Parse(JToken) 声明 public override Task Parse(JToken payload) 参数 类型 名称 描述 JToken payload 返回 类型 描述 Task 重写 KhEventBase.Parse(JToken) | 改善此文档 查看源代码 Send(Bot) 声明 public override Task Send(Bot bot) 参数 类型 名称 描述 Bot bot 返回 类型 描述 Task 重写 KhEventBase.Send(Bot) 实现 IKhEventUser"
+  },
+  "api/Kaiheila.Net.html": {
+    "href": "api/Kaiheila.Net.html",
+    "title": "Kaiheila.Net 命名空间",
+    "keywords": "Kaiheila.Net 命名空间 类 RequestHelper"
+  },
+  "api/Kaiheila.Net.RequestHelper.html": {
+    "href": "api/Kaiheila.Net.RequestHelper.html",
+    "title": "RequestHelper 类",
+    "keywords": "RequestHelper 类 继承 System.Object RequestHelper 命名空间 : Kaiheila.Net 程序集 : kaiheila-dotnet.dll 语法 public static class RequestHelper : object 字段 | 改善此文档 查看源代码 Accept 声明 public const string Accept = null 字段值 类型 描述 System.String | 改善此文档 查看源代码 UserAgent 声明 public const string UserAgent = null 字段值 类型 描述 System.String 方法 | 改善此文档 查看源代码 CreateWebRequest(String, Boolean) 声明 public static HttpWebRequest CreateWebRequest(string uri, bool post = false) 参数 类型 名称 描述 System.String uri System.Boolean post 返回 类型 描述 HttpWebRequest | 改善此文档 查看源代码 ReadBodyAsStringAsync(HttpContext) 声明 public static Task<string> ReadBodyAsStringAsync(this HttpContext context) 参数 类型 名称 描述 HttpContext context 返回 类型 描述 Task < System.String >"
+  },
+  "api/Kaiheila.Test.Events.Combiners.html": {
+    "href": "api/Kaiheila.Test.Events.Combiners.html",
+    "title": "Kaiheila.Test.Events.Combiners 命名空间",
+    "keywords": "Kaiheila.Test.Events.Combiners 命名空间 类 KhEventCombiners"
+  },
+  "api/Kaiheila.Test.Events.Combiners.KhEventCombiners.html": {
+    "href": "api/Kaiheila.Test.Events.Combiners.KhEventCombiners.html",
+    "title": "KhEventCombiners 类",
+    "keywords": "KhEventCombiners 类 继承 System.Object KhEventCombiners 命名空间 : Kaiheila.Test.Events.Combiners 程序集 : kaiheila-dotnet-test.dll 语法 public class KhEventCombiners : object 方法 | 改善此文档 查看源代码 KhEventCombinersBasedOnKhEventCombiner() 声明 public static void KhEventCombinersBasedOnKhEventCombiner()"
+  },
+  "articles/guides/index.html": {
+    "href": "articles/guides/index.html",
+    "title": "指南",
+    "keywords": "指南 欢迎来到指南！"
+  },
+  "articles/tutorials/index.html": {
+    "href": "articles/tutorials/index.html",
+    "title": "教程",
+    "keywords": "教程 欢迎使用 Kaiheila.NET！这里的教程可以让你快速从零开始创建一个属于自己的机器人。 现在开始： 第一部分：创建一个「回显」机器人 。 现在开始"
+  },
+  "articles/tutorials/part-a.html": {
+    "href": "articles/tutorials/part-a.html",
+    "title": "第一部分：创建一个「回显」机器人",
+    "keywords": "第一部分：创建一个「回显」机器人 欢迎使用 Kaiheila.NET！从现在开始，我们将使用 Kaiheila.NET 开始创建属于自己的机器人。 在第一部分，我们将会创建一个「回显」机器人。这个机器人会将用户 At 它时候所说的话发回到频道中。 注意： 你无需任何的编程基础！ 这一部分的教程足够简单，你只需要将教程中的代码复制粘贴到你的项目中即可。但是，在这部分教程结束之后，你可能需要稍微掌握一点 「 C# 」 方面的知识才能更好地开发出你想要的机器人，而这些知识一点也不难。 如果你在阅读教程的时候或自己开发的时候有任何问题，你都可以来「 机器人社区 」服务器的「开发」分组提问。 第一步：安装！ 首先，你需要安装一个 .NET SDK。这是机器人运行所需的程序框架。 可以在 这里 下载，也可以在 这里 查看安装说明。 然后，你需要一个集成开发环境（IDE）。在 Windows 上，我们推荐你使用 Visual Studio 。在 MacOS 和 Linux 上，我们推荐你使用 Visual Studio Code 。按照提示完成安装。 注意 在安装 Visual Studio 时，你需要在「工作负载」中选择「.NET 桌面开发」。 你的开发环境已经就绪！ 第二步：创建！ 接下来，让我们创建一个新的项目。 Visual Studio Visual Studio Code 打开 Visual Studio 并创建一个新的 .NET Core 控制台 项目，项目名为 echo 。 点击上方绿色的播放键运行项目。你会看到应用成功输出了 Hello World! 。 在你喜欢的位置新建一个名为 echo 的文件夹。这将会是我们的项目文件夹。 打开 Visual Studio Code，并打开这个文件夹。 选择「终端-新建」，并键入： dotnet new console 你的项目已经就绪！键入： dotnet run 你会看到应用成功输出了 Hello World! 。 接着，前往「 开黑啦开发者中心 」并新建一个机器人。创建成功后，不要关闭页面。之后我们需要用到页面上提供的内容。 第三步：编程！ 引入 Kaiheila.NET Visual Studio Visual Studio Code 右键单击项目文件中的「引用项」，并选择「管理 NuGet 程序包」。 使用搜索找到「Kaiheila」包，并点击安装。 在终端中键入： dotnet add package Kaiheila 选择你的连接方式 如果你希望自己的机器人可以接收到来自其他人的消息并做出响应，那么你的机器人就必须连接到「开黑啦」服务器。 「开黑啦」目前提供了两种连接服务器的方法： WebHook 和 WebSocket 。你可以选择一种方法进行连接。 WebHook WebSocket 在「开发者中心」中选择连接方式为 WebHook 。 打开 Program.cs ，将文件内容替换为下面的内容： using System; using System.Threading; using Kaiheila.Client; using Kaiheila.Client.WebHook; using Kaiheila.Events; namespace Echo { public static class Program { // 程序的「入口点」 public static void Main(string[] args) { // 程序将从这里开始运行 // 首先，创建一个 Bot Bot bot = WebHookClient.CreateWebHookClient() // 使用「WebHookClient」来创建 .Configure(options => { options .Listen(8000) // 要监听的端口 .UseEncryptKey(\"VYDVSU\") // 「开发者中心」中提供的 Encrypt Key .UseVerifyToken(\"JEe-o85KiCd78fi\") // 「开发者中心」中提供的 Verify Token .UseBotAuthorization(\"1E/3p7EClDQ=/Fro4cT47ipnqcERGFDvfQw==\"); // 「开发者中心」中提供的 Token }).Build(); // 创建「WebHookClient」 bot.Start(); // 启动机器人 // TODO: 监听并处理机器人接收到的消息 new ManualResetEvent(false).WaitOne(); // 阻止应用退出 } } } 将上面字符串（即双引号）中的各项内容修改为「开发者中心」的机器人项目页面中提供的内容。 将「开发者中心」机器人页面中的 Callback Url 修改为： http://你的公网IP:8000 在「开发者中心」中选择连接方式为 WebSocket 。 打开 Program.cs ，将文件内容替换为下面的内容： using System; using System.Threading; using Kaiheila.Client; using Kaiheila.Client.WebHook; using Kaiheila.Events; namespace Echo { public static class Program { // 程序的「入口点」 public static void Main(string[] args) { // 程序将从这里开始运行 // 首先，创建一个 Bot Bot bot = WebSocketClient.CreateWebSocketClient() // 使用「WebSocketClient」来创建 .Configure(options => { options .UseEncryptKey(\"VYDVSU\") // 「开发者中心」中提供的 Encrypt Key .UseVerifyToken(\"JEe-o85KiCd78fi\") // 「开发者中心」中提供的 Verify Token .UseBotAuthorization(\"1E/3p7EClDQ=/Fro4cT47ipnqcERGFDvfQw==\"); // 「开发者中心」中提供的 Token }).Build(); // 创建「WebSocketClient」 bot.Start(); // 启动机器人 // TODO: 监听并处理机器人接收到的消息 new ManualResetEvent(false).WaitOne(); // 阻止应用退出 } } } 将上面字符串（即双引号）中的各项内容修改为「开发者中心」的机器人项目页面中提供的内容。 编写回显代码 现在，我们的机器人已经连接到了开黑啦服务器。接下来，我们要对机器人收到的消息进行处理，也就是完成 TODO 中的部分。 将 TODO 行替换成以下内容： long selfId = 2152172534; // 将「selfId」设定为自己的机器人ID bot.Event.Subscribe(x => // 订阅机器人事件，并处理得到的事件x { if (!(x is KhEventTextMessage msg)) return; // 如果x不是「KhEventTextMessage」（文本消息）就什么也不做 // 此时，msg已经是「KhEventTextMessage」（文本消息）了 if (!msg.Content.Contains(\"#\" + selfId)) return; // 如果msg的内容中不含「#2152172534」就什么也不做 string result = msg.Content.Split(\"#\" + selfId)[1].Trim(); // 将「result」设定为「#2152172534」之后的内容 msg.Content = result; // 将msg的内容设定为我们刚刚得到的「result」 bot.Send(msg); // 让机器人发送这个msg }); 这样，机器人就会检测每一条收到的消息。如果消息内含有 #2152172534 ，那么就会返回这之后的内容。 而在开黑啦中，「At」人的实际内容就是 @用户#ID ，也就是说你发送一条内容为「 @Il Harper 内容 」的消息，机器人看到的实际上是「 @Il Harper#2152172534 内容 」。这样，我们只需要截取ID之后的内容，就可以实现「对 At 消息做出响应」了。 第四步：运行！ Visual Studio Visual Studio Code 按下播放键，你的机器人即会开始运行。 在终端中键入： dotnet run 你的机器人即会开始运行。 现在，在「开发者中心」中跳转到「邀请」页面，将机器人邀请到你的服务器，开始使用你自己创建的机器人吧！ 附：程序的完整代码 如果你在创建机器人的过程中出现了问题，你可以参考下面的完整代码。如果你有任何其他问题，你也可以来「 机器人社区 」服务器的「开发」分组提问。 WebHook WebSocket using System; using System.Threading; using Kaiheila.Client; using Kaiheila.Client.WebHook; using Kaiheila.Events; namespace Echo { public static class Program { // 程序的「入口点」 public static void Main(string[] args) { // 程序将从这里开始运行 // 首先，创建一个 Bot Bot bot = WebHookClient.CreateWebHookClient() // 使用「WebHookClient」来创建 .Configure(options => { options .Listen(8000) // 要监听的端口 .UseEncryptKey(\"VYDVSU\") // 「开发者中心」中提供的 Encrypt Key .UseVerifyToken(\"JEe-o85KiCd78fi\") // 「开发者中心」中提供的 Verify Token .UseBotAuthorization(\"1E/3p7EClDQ=/Fro4cT47ipnqcERGFDvfQw==\"); // 「开发者中心」中提供的 Token }).Build(); // 创建「WebHookClient」 bot.Start(); // 启动机器人 long selfId = 2152172534; // 将「selfId」设定为自己的机器人ID bot.Event.Subscribe(x => // 订阅机器人事件，并处理得到的事件x { if (!(x is KhEventTextMessage msg)) return; // 如果x不是「KhEventTextMessage」（文本消息）就什么也不做 // 此时，msg已经是「KhEventTextMessage」（文本消息）了 if (!msg.Content.Contains(\"#\" + selfId)) return; // 如果msg的内容中不含「#2152172534」就什么也不做 string result = msg.Content.Split(\"#\" + selfId)[1].Trim(); // 将「result」设定为「#2152172534」之后的内容 msg.Content = result; // 将msg的内容设定为我们刚刚得到的「result」 bot.Send(msg); // 让机器人发送这个msg }); new ManualResetEvent(false).WaitOne(); // 阻止应用退出 } } } using System; using System.Threading; using Kaiheila.Client; using Kaiheila.Client.WebHook; using Kaiheila.Events; namespace Echo { public static class Program { // 程序的「入口点」 public static void Main(string[] args) { // 程序将从这里开始运行 // 首先，创建一个 Bot Bot bot = WebSocketClient.CreateWebSocketClient() // 使用「WebSocketClient」来创建 .Configure(options => { options .UseEncryptKey(\"VYDVSU\") // 「开发者中心」中提供的 Encrypt Key .UseVerifyToken(\"JEe-o85KiCd78fi\") // 「开发者中心」中提供的 Verify Token .UseBotAuthorization(\"1E/3p7EClDQ=/Fro4cT47ipnqcERGFDvfQw==\"); // 「开发者中心」中提供的 Token }).Build(); // 创建「WebSocketClient」 bot.Start(); // 启动机器人 long selfId = 2152172534; // 将「selfId」设定为自己的机器人ID bot.Event.Subscribe(x => // 订阅机器人事件，并处理得到的事件x { if (!(x is KhEventTextMessage msg)) return; // 如果x不是「KhEventTextMessage」（文本消息）就什么也不做 // 此时，msg已经是「KhEventTextMessage」（文本消息）了 if (!msg.Content.Contains(\"#\" + selfId)) return; // 如果msg的内容中不含「#2152172534」就什么也不做 string result = msg.Content.Split(\"#\" + selfId)[1].Trim(); // 将「result」设定为「#2152172534」之后的内容 msg.Content = result; // 将msg的内容设定为我们刚刚得到的「result」 bot.Send(msg); // 让机器人发送这个msg }); new ManualResetEvent(false).WaitOne(); // 阻止应用退出 } } }"
+  },
+  "articles/tutorials/part-b.html": {
+    "href": "articles/tutorials/part-b.html",
+    "title": "第二部分（可选）：优化你的程序",
+    "keywords": "第二部分（可选）：优化你的程序"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Kaiheila.NET",
+    "keywords": "Kaiheila.NET 感谢使用 Kaiheila.NET。这里是 Kaiheila.NET 的文档站，所有与 SDK 相关的教程、说明和 API 参考都会在这里放置。 快速上手 欢迎使用 Kaiheila.NET！请先查看我们为你准备的 教程 ，让你在几分钟内就可以从零开始创建一个属于自己的机器人。 查看教程 指南 这里提供了详细的操作指南和方法，你可以参考 指南 里的文章快速高效地创建自己的机器人。 查看指南 API 浏览器 Kaiheila.NET 提供了丰富的 API 和详细的 API 参考文档。转到 API 浏览器 浏览所有的 API。 浏览 API"
+  }
+}

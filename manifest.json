@@ -1,0 +1,941 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/kaiheila-dotnet-docs/kaiheila-dotnet-docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Assets.AssetsHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Assets.AssetsHelper.html",
+          "hash": "/hTBcWRO8bO3oOPondpKTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Assets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Assets.html",
+          "hash": "JRT9j5KHEGQjzhuchiuQyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.AuthorizationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.AuthorizationType.html",
+          "hash": "O/lp90QqiwplpxqMVKTKbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Bot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Bot.html",
+          "hash": "tBKJR95XE+vatWInHTwmJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.BotExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.BotExtensions.html",
+          "hash": "tzL29D58ikod+5STbdk66Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.BotOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.BotOptions.html",
+          "hash": "kx77DvtZ8atlNeedDUuFkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Rest.RestClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Rest.RestClient.html",
+          "hash": "goZZeSWjw93xsHHTbSc9nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Rest.RestClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Rest.RestClientBuilder.html",
+          "hash": "mNfciZ9HXq7vcriQUPuDIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Rest.RestClientException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Rest.RestClientException.html",
+          "hash": "ebdlplFIn5ERxzjWBsA/LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Rest.RestClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Rest.RestClientExtensions.html",
+          "hash": "yzdE1Z0BNosFFN+bAbEPBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Rest.RestClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Rest.RestClientOptions.html",
+          "hash": "uJNEH/lPKIxHIR74GcJAAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.Rest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.Rest.html",
+          "hash": "yOhh7IVIes6cPuq6iwnMbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.V2.V2Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.V2.V2Client.html",
+          "hash": "ZHXIc0RertNdHlmoF5k80w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.V2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.V2.html",
+          "hash": "gjT05UrOU3k++rq/Wsh8Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClient.html",
+          "hash": "hTwiqhkYKU9xdPgWTXVx+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientBuilder.html",
+          "hash": "vTr9nF1pEiv/MM00vUYaAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientChallengeHandlerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientChallengeHandlerExtensions.html",
+          "hash": "r2J7BG4NKJIu/XjPqlTsyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecompressorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecompressorExtensions.html",
+          "hash": "sXtK0PXRvgzMpN251x8GmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecompressorMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecompressorMiddleware.html",
+          "hash": "hpy2eA9aZcaSf5EEhEaxrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecryptorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecryptorExtensions.html",
+          "hash": "zBh8w8QiRel2SyhgOSpSaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecryptorMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDecryptorMiddleware.html",
+          "hash": "yD6H+ibrlJCMD5u/uvblIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDeserializerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDeserializerExtensions.html",
+          "hash": "OXqXs5PnjCpO8799eo1aQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDeserializerMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientDeserializerMiddleware.html",
+          "hash": "lrzv/3Q9K1srCqKy/Lbd2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientEmitterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientEmitterExtensions.html",
+          "hash": "RE3s6rCUOKtm1O6/QwKLWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientEmitterMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientEmitterMiddleware.html",
+          "hash": "QuK0lAljZxJg9CEngPp9EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientException.html",
+          "hash": "UMbx3MOVOG4AzfQaVRuGLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerExtensions.html",
+          "hash": "6vFY4a+kirUkrnnBn0vyEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientExceptionHandlerMiddleware.html",
+          "hash": "CVIQXJ7Y+rnckyJlXPuAmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientExtensions.html",
+          "hash": "wKtjIP8611W2cqRRdoZK7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientOptions.html",
+          "hash": "zbOvRvHCYNpyJ/fMYadyKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientShorterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientShorterExtensions.html",
+          "hash": "5uhwBABfMSvg14vqRpjtFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.WebHookClientShorterMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.WebHookClientShorterMiddleware.html",
+          "hash": "aIQLEncCEcN6imegb2Z0PQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.WebHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.WebHook.html",
+          "hash": "Z3P2arSJN7zY4oC/H0gtyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.ZeroClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.ZeroClient.html",
+          "hash": "3kc+udHe0zB6KDvpjhOOtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Client.html",
+          "hash": "G5DOQ00KnZt41Fa2cYHp+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Data.IKhEventUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Data.IKhEventUser.html",
+          "hash": "lL/zL0boF1BjDOpBeHR7WQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Data.KhChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Data.KhChannel.html",
+          "hash": "jHo9ofIS/Igl8n49j9mfzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Data.KhFriends.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Data.KhFriends.html",
+          "hash": "5+eB9nSn2CFN7wACQ9Gqrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Data.KhFriendsType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Data.KhFriendsType.html",
+          "hash": "GLKVBr+qV5NY+OxP71QgGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Data.KhUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Data.KhUser.html",
+          "hash": "nT8fI1nfu4x0Sda7pN4f6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Data.html",
+          "hash": "Blzj1sWphf4qhKv+Ngrjsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.Combiners.KhEventCombinerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.Combiners.KhEventCombinerAttribute.html",
+          "hash": "5m1p4kDCcZKDF6D6zTEQoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.Combiners.KhEventCombinerBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.Combiners.KhEventCombinerBase.html",
+          "hash": "5P8GZjwjxikpZ5YyWJjCxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.Combiners.KhEventCombinerHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.Combiners.KhEventCombinerHost.html",
+          "hash": "b72CJ1SgizM8aBYCLFenZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.Combiners.KhEventTextMessageCombiner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.Combiners.KhEventTextMessageCombiner.html",
+          "hash": "1r7VD8twVMZ39bnAj/9SXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.Combiners.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.Combiners.html",
+          "hash": "QnPA6QJkRc/gxXiBrAgT5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.EventParseException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.EventParseException.html",
+          "hash": "d8AM4gyoB1vtXdKv0p5Pbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.EventParserClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.EventParserClientExtensions.html",
+          "hash": "ANIy1C2m3iRn0Nb6kc3egw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.EventParserHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.EventParserHost.html",
+          "hash": "k+0vL0Xwtn7yLBSzGXfCVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.IEventParserClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.IEventParserClientOptions.html",
+          "hash": "Hx1jBVl4AMWVUgyuCaoyEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.KhEventAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.KhEventAsset.html",
+          "hash": "FoM6jfmg+xIfKgvLDKkntg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.KhEventAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.KhEventAttribute.html",
+          "hash": "dV3cPGdmB3lDp4dtlHlXSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.KhEventBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.KhEventBase.html",
+          "hash": "y22XJLvyLfkPZQ63fVdu4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.KhEventFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.KhEventFile.html",
+          "hash": "SFoGh58TWqHF446uBXTwiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.KhEventImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.KhEventImage.html",
+          "hash": "f4gt6xuFJiCEHs7JLsm7bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.KhEventTextMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.KhEventTextMessage.html",
+          "hash": "W/fR/7wPycyvCIrWldrB1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Events.html",
+          "hash": "9u7QE8xTgs6tZAoCjGyxCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Net.RequestHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Net.RequestHelper.html",
+          "hash": "CpVPXGZZqX5tJkxkO+/rJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Net.html",
+          "hash": "2OGZF5011w8zxGktdFf51g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Test.Events.Combiners.KhEventCombiners.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Test.Events.Combiners.KhEventCombiners.html",
+          "hash": "lsdDQkOQPd8ZRaGePCbUtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Kaiheila.Test.Events.Combiners.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Kaiheila.Test.Events.Combiners.html",
+          "hash": "/n2jcM8M+5vr15p3Hz9GbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "HhI492/78O0ekizlYnEZmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "EC8ZKdbRM0TeoH/pum+YYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/guides/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/guides/index.html",
+          "hash": "rz68pAsIRn7gMBft01VZig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/guides/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/guides/toc.html",
+          "hash": "6hBgKM9Lam7lHWjD1wGLhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/tutorials/images/echo-sample.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/tutorials/images/echo-sample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/tutorials/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/tutorials/index.html",
+          "hash": "RKSTPjdWKbJCZCGX8g3AAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/tutorials/part-a.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/tutorials/part-a.html",
+          "hash": "lZqlr6bD+bjN9RqdSWdVwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/tutorials/part-b.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/tutorials/part-b.html",
+          "hash": "FdUVCHMpfFJ7hKE41V2PFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/tutorials/toc.html",
+          "hash": "jiWqRvyGjhXA0QUH0zd/dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "qWfir+1gUI0AeS9kubeLPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "lPv497M5xSYFYkxN7tXvcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 61,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
